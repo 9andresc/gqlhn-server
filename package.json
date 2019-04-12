@@ -30,6 +30,7 @@
     "typescript": "3.4.3"
   },
   "dependencies": {
-    "@types/node": "11.13.4"
+    "@types/node": "11.13.4",
+    "graphql-yoga": "1.17.4"
   }
 }
