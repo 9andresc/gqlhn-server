@@ -1,0 +1,35 @@
+{
+  "name": "gqlhn-server",
+  "version": "1.0.0",
+  "description": "A GraphQL server implementation for Hacker News",
+  "scripts": {
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "npm run build:live",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9andresc/gqlhn-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/9andresc/gqlhn-server/issues"
+  },
+  "homepage": "https://github.com/9andresc/gqlhn-server#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "1.6.0",
+    "@typescript-eslint/parser": "1.6.0",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "nodemon": "1.18.11",
+    "prettier": "1.16.4",
+    "ts-node": "8.0.3",
+    "typescript": "3.4.3"
+  },
+  "dependencies": {
+    "@types/node": "11.13.4"
+  }
+}
