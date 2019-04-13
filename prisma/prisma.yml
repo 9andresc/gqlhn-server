@@ -1,0 +1,8 @@
+#endpoint: ''
+endpoint: https://us1.prisma.sh/gustavo-andres-7f9e2c/gqlhn-server/dev
+
+datamodel: datamodel.prisma
+
+generate:
+  - generator: typescript-client
+    output: ../src/generated/prisma-client
