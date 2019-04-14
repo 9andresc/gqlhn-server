@@ -29,8 +29,12 @@
     "typescript": "3.4.3"
   },
   "dependencies": {
+    "@types/bcryptjs": "2.4.2",
+    "@types/jsonwebtoken": "8.3.2",
     "@types/node": "11.13.4",
+    "bcryptjs": "2.4.3",
     "graphql-yoga": "1.17.4",
+    "jsonwebtoken": "8.5.1",
     "prisma-client-lib": "1.30.1"
   }
 }
