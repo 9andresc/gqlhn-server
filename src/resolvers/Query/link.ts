@@ -12,9 +12,10 @@ export default {
       : {};
 
     return context.prisma.links({
+      where,
       first: args.first,
       skip: args.skip,
-      where
+      orderBy: args.orderBy
     });
   }
 };
