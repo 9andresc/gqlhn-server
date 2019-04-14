@@ -1,14 +1,19 @@
 type Query {
+  # Links
   feed: [Link!]!
 }
 
 type Mutation {
-  post(url: String!, description: String!): Link!
-  signup(email: String!, name: String!, password: String!): AuthPayload
+  # Authentication
   signin(email: String!, password: String!): AuthPayload
+  signup(email: String!, name: String!, password: String!): AuthPayload
+  # Links
+  post(url: String!, description: String!): Link!
+  vote(linkId: ID!): Vote
 }
 
 type Subscription {
+  # Links
   newLink: Link
 }
 
@@ -22,6 +27,7 @@ type Link {
   description: String!
   postedBy: User
   url: String!
+  votes: [Vote!]!
 }
 
 type User {
@@ -29,4 +35,11 @@ type User {
   name: String!
   email: String!
   links: [Link!]!
+  votes: [Vote!]!
+}
+
+type Vote {
+  id: ID!
+  link: Link!
+  user: User!
 }
