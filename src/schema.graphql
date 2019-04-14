@@ -9,12 +9,15 @@ type Mutation {
   signup(email: String!, name: String!, password: String!): AuthPayload
   # Links
   post(url: String!, description: String!): Link!
+  # Votes
   vote(linkId: ID!): Vote
 }
 
 type Subscription {
   # Links
   newLink: Link
+  # Votes
+  newVote: Vote
 }
 
 type AuthPayload {
