@@ -1,7 +1,7 @@
 import auth from './auth';
-import links from './links';
+import link from './link';
 
 export default {
   ...auth,
-  ...links
+  ...link
 };
