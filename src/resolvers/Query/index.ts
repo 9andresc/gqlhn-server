@@ -1,5 +1,5 @@
-import { posts } from './posts';
+import links from './links';
 
 export default {
-  ...posts
+  ...links
 };

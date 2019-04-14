@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 
 import { Context, APP_SECRET } from '../../utils';
 
-export const auth = {
+export default {
   async signin(parent: any, args: any, context: Context) {
     const user = await context.prisma.user({ email: args.email });
     if (!user) {

@@ -1,6 +1,6 @@
 import { Context, getUserId } from '../../utils';
 
-export const posts = {
+export default {
   post(parent: any, args: any, context: Context) {
     const userId = getUserId(context);
 

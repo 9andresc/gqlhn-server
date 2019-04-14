@@ -1,6 +1,6 @@
 import { Context } from '../../utils';
 
-export const links = {
+export default {
   newLink: {
     resolve(payload: any) {
       return payload;

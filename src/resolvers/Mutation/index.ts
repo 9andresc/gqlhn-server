@@ -1,7 +1,7 @@
-import { auth } from './auth';
-import { posts } from './posts';
+import auth from './auth';
+import links from './links';
 
 export default {
   ...auth,
-  ...posts
+  ...links
 };
