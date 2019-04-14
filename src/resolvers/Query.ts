@@ -1,14 +1,8 @@
-import { TLink } from '../types';
-
-const links: [TLink] = [
-  {
-    id: 'link-0',
-    url: 'www.howtographql.com',
-    description: 'Full-stack tutorial for GraphQL'
-  }
-];
+import { Context } from '../utils';
 
 export const Query = {
   info: () => 'This is the API of a Hacker News clone',
-  feed: () => links
+  feed: (root: any, args: any, context: Context, info: any) => {
+    return context.prisma.links();
+  }
 };

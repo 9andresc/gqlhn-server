@@ -1,22 +1,10 @@
-import { TLink } from '../types';
-
-const links: [TLink] = [
-  {
-    id: 'link-0',
-    url: 'www.howtographql.com',
-    description: 'Full-stack tutorial for GraphQL'
-  }
-];
-let idCount = links.length;
+import { Context } from '../utils';
 
 export const Mutation = {
-  post: (parent: TLink, args: any) => {
-    const link: TLink = {
-      id: `link-${idCount++}`,
-      description: args.description,
-      url: args.url
-    };
-    links.push(link);
-    return link;
+  post: (root: any, args: any, context: Context) => {
+    return context.prisma.createLink({
+      url: args.url,
+      description: args.description
+    });
   }
 };
