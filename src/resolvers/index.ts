@@ -1,7 +1,11 @@
-import { Mutation } from './Mutation';
-import { Query } from './Query';
+import { Link } from './Link';
+import Mutation from './Mutation';
+import Query from './Query';
+import { User } from './User';
 
 export default {
+  Link,
   Mutation,
-  Query
+  Query,
+  User
 };

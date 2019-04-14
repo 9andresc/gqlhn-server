@@ -4,7 +4,10 @@ import { prisma } from './generated/prisma-client';
 import resolvers from './resolvers';
 
 const server = new GraphQLServer({
-  context: { prisma },
+  context: request => ({
+    prisma,
+    ...request
+  }),
   resolvers,
   typeDefs: './src/schema.graphql'
 });
