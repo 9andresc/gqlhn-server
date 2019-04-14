@@ -11,6 +11,10 @@ export default {
         }
       : {};
 
-    return context.prisma.links({ where });
+    return context.prisma.links({
+      first: args.first,
+      skip: args.skip,
+      where
+    });
   }
 };
