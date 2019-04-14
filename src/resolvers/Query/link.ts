@@ -10,12 +10,17 @@ export default {
           ]
         }
       : {};
-
-    return context.prisma.links({
+    const links = await context.prisma.links({
       where,
       first: args.first,
       skip: args.skip,
       orderBy: args.orderBy
     });
+    const count = await context.prisma
+      .linksConnection({ where })
+      .aggregate()
+      .count();
+
+    return { links, count };
   }
 };
