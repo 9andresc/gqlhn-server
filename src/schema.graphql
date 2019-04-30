@@ -22,6 +22,7 @@ type Subscription {
 
 type Link {
   id: ID!
+  createdAt: String
   description: String!
   postedBy: User
   url: String!
