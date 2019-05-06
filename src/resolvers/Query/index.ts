@@ -1,5 +1,8 @@
-import link from './link';
+import { feed } from './link';
+
+import { helmet } from '../helmet';
 
 export default {
-  ...link
+  // Link
+  feed: helmet(feed)
 };

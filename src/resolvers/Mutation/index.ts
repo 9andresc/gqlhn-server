@@ -1,7 +1,13 @@
-import auth from './auth';
-import link from './link';
+import { signin, signup } from './auth';
+import { post, vote } from './link';
+
+import { helmet } from '../helmet';
 
 export default {
-  ...auth,
-  ...link
+  // Authentication
+  signin: helmet(signin),
+  signup: helmet(signup),
+  // Link
+  post: helmet(post),
+  vote: helmet(vote)
 };

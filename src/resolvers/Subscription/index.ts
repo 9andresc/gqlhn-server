@@ -1,7 +1,9 @@
-import link from './link';
-import vote from './vote';
+import { newLink } from './link';
+import { newVote } from './vote';
 
 export default {
-  ...link,
-  ...vote
+  // Link
+  newLink,
+  // Vote
+  newVote
 };
