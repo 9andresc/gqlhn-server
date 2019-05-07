@@ -1,12 +1,12 @@
-import { signin, signup } from './auth';
+import { signIn, signUp } from './auth';
 import { post, vote } from './link';
 
 import { helmet } from '../helmet';
 
 export default {
   // Authentication
-  signin: helmet(signin),
-  signup: helmet(signup),
+  signIn: helmet(signIn),
+  signUp: helmet(signUp),
   // Link
   post: helmet(post),
   vote: helmet(vote)

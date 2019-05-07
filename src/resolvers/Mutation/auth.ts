@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import { InvalidCredentials, UserAlreadyExists } from '../../errors';
 import { Context } from '../../utils';
 
-export async function signin(_parent: any, args: any, context: Context) {
+export async function signIn(_parent: any, args: any, context: Context) {
   const user = await context.prisma.user({ email: args.email });
   if (!user) {
     throw new InvalidCredentials();
@@ -20,7 +20,7 @@ export async function signin(_parent: any, args: any, context: Context) {
   return { token, user };
 }
 
-export async function signup(_parent: any, args: any, context: Context) {
+export async function signUp(_parent: any, args: any, context: Context) {
   let user = await context.prisma.user({ email: args.email });
   if (user) {
     throw new UserAlreadyExists();
